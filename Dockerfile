@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:3.14
 
 ARG ISSO_VER=0.12.2
 
@@ -11,12 +11,13 @@ RUN apk -U upgrade \
     build-base \
  && apk add \
     python3 \
+    py3-pip \
     sqlite \
     openssl \
     ca-certificates \
     su-exec \
     tini \
- && pip3 install --no-cache "isso==${ISSO_VER}" \
+ && pip3 install wheel && pip3 install --no-cache "isso==${ISSO_VER}" \
  && apk del build-dependencies \
  && rm -rf /tmp/* /var/cache/apk/*
 
@@ -28,6 +29,6 @@ EXPOSE 8080
 
 VOLUME /db /config
 
-LABEL maintainer="Wonderfall <wonderfall@targaryen.house>"
+LABEL maintainer="Stefano Marinelli <stefano@dragas.it>"
 
 CMD ["run.sh"]
