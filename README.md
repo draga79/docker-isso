@@ -1,4 +1,4 @@
-## wonderfall/isso
+## dragas/isso
 
 ![](https://i.goopics.net/q1.png)
 
@@ -7,7 +7,7 @@
 Isso is a commenting server similar to Disqus. More info on the [official website](https://posativ.org/isso/).
 
 #### Features
-- Based on Alpine Linux 3.3.
+- Based on Alpine Linux 3.14.
 - Latest Isso installed with `pip`.
 
 #### Build-time variables
