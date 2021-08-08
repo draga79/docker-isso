@@ -5,6 +5,7 @@
 
 #### What is this?
 Isso is a commenting server similar to Disqus. More info on the [official website](https://posativ.org/isso/).
+
 This image is based on https://github.com/Wonderfall/docker-isso
 
 #### Features
